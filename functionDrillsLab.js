@@ -383,13 +383,13 @@ console.log(emailCheck("scottninlv@yahoo.com"))
 
 
 
-function buyChocolate(gold) {
-  let chocolateFrogs = 3
-  return gold / chocolateFrogs
-}
+// function buyChocolate(gold) {
+//   let chocolateFrogs = 3
+//   return gold / chocolateFrogs
+// }
 
-let totalFrogs = buyChocolate(4)
-console.log(totalFrogs + 2)
+// let totalFrogs = buyChocolate(4)
+// console.log(totalFrogs)
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -403,10 +403,10 @@ console.log(totalFrogs + 2)
   return Math.floor(gold/chocolateFrogs)
 }
 
-let totalFrogs1 = buyChocolate(4)
-console.log(totalFrogs)
+let totalFrogs1 = buyChocolate(10)
+console.log(totalFrogs1)
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+let sampleArray = [0, 1, 2, 3, 4, 7, 5, 6, 8, 9]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
@@ -416,8 +416,8 @@ let sampleArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function isAcscending(arr) {
   let newArray = arr[0]
-  for (let i = 1; i < arr.length - 1; i++) {
-    if (arr[i] <= newArray) {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < newArray) {
       return false
     } else {
       newArray = arr[i]
